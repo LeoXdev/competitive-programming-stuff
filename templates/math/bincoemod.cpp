@@ -20,3 +20,13 @@ ll bincoe(ll n, ll k) {
   if (k < 0 || k > n) return 0;
   return 1ll * fact[n] * inv_fact[k] % MOD * inv_fact[n - k] % MOD;
 }
+ll bincoe(ll n, ll k) {  // alternativa sin precalculo
+  if (k == 0 || k == n) return 1;
+ 
+  ll res = 1;
+  for (int i = 0; i < k; i++) {
+    res = (res * ((n - i) % MOD)) % MOD;
+    res = (res * pow_mod(i + 1, MOD - 2, MOD)) % MOD;
+  }
+  return res;
+}

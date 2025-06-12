@@ -1,5 +1,6 @@
 ll bincoe(int n, int k) {
-  if (k == 0) return 1;
+  if (k < 0 || k > n) return 0;  // no todos los problemas requieren esto
+  if (k == 0 || k == n) return 1;
   if (k > n - k) k = n - k;
 
   ll res = 1;

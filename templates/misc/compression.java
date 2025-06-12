@@ -12,14 +12,14 @@ public class Main {
     for (int i = 0; i < a.size(); i++) a.set(i, m.get(a.get(i)));
 
     // Pair
-    ArrayList<Pair<Integer, Integer>> p = new ArrayList<>();  // a será sobreescrito 
-    for (int i = 0; i < a.size(); ++i) p.add(new Pair<>(a.get(i), i)); 
-    Collections.sort(p);  // ordena pares de acuerdo al primer valor 
-    int n = 0; 
-    for (int i = 0; i < a.size(); ++i) { 
-      if (i > 0 && !p.get(i-1).first.equals(p.get(i).first)) n++; 
-      a.set(p.get(i).second, n);  // +1 a n si trabajamos con fenwick/segtree 
-    } 
+    ArrayList<Pair<Integer, Integer>> p = new ArrayList<>();  // a será sobreescrito
+    for (int i = 0; i < a.size(); ++i) p.add(new Pair<>(a.get(i), i));
+    Collections.sort(p);  // ordena pares de acuerdo al primer valor
+    int n = 0;
+    for (int i = 0; i < a.size(); ++i) {
+      if (i > 0 && !p.get(i-1).first.equals(p.get(i).first)) n++;
+      a.set(p.get(i).second, n);  // +1 a n si trabajamos con fenwick/segtree
+    }
   }
 }
 class Pair<F extends Comparable<F>, S extends Comparable<S>> implements Comparable<Pair<F, S>> {
