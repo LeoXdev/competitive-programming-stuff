@@ -30,3 +30,24 @@ class Fenwick {
     return i + 1;
   }
 }
+class Fenwick2D {
+  private int[][] tree;  // llenar como matrices normales [x][y], llamar metodos [y][x]
+  private int n, m;
+  public Fenwick2D(int n, int m) {
+    this.n = n; this.m = m;
+    tree = new int[n + 1][m + 1];
+  }
+  public int sum(int x, int y) {  // suma submatriz (1, 1) a (x, y)
+    int res = 0;
+    for (int i = x; i > 0; i -= Integer.lowestOneBit(i))
+      for (int j = y; j > 0; j -= Integer.lowestOneBit(j)) res += tree[i][j];
+    return res;
+  }
+  public int rangeSum(int x1, int y1, int x2, int y2) {  // suma submatriz (x1, y1) a (x2, y2)
+    return sum(x2, y2) - sum(x1 - 1, y2) - sum(x2, y1 - 1) + sum(x1 - 1, y1 - 1);
+  }
+  public void add(int x, int y, int val) {
+    for (int i = x; i <= n; i += Integer.lowestOneBit(i))
+      for (int j = y; j <= m; j += Integer.lowestOneBit(j)) tree[i][j] += val;
+  }
+}

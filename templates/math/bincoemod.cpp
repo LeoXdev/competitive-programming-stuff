@@ -30,3 +30,10 @@ ll bincoe(ll n, ll k) {  // alternativa sin precalculo
   }
   return res;
 }
+// permutaciones con repeticion n!/(n1!*n2!...) mod MOD
+ll permsrep(ll ns) {  // ns ~ [2, 2, 1, 1]
+  ll n = 0; for (int x : ns) n += x;
+  ll res = fact[n];  // numerador = n!
+  for (ll x : ns) res = res * inv_fact[x] % MOD;  // dividir entre ni!
+  return res;
+}

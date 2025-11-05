@@ -9,7 +9,7 @@ public class Main {
     TreeMap<Integer, Integer> m = new TreeMap<>();
     for (int i = 0; i < c.size(); i++) m.put(c.get(i), i);
     ArrayList<Integer> vo = new ArrayList<>(c); // recuperar: vo.get(comprimido)
-    for (int i = 0; i < a.size(); i++) a.set(i, m.get(a.get(i)));
+    for (int i = 0; i < a.size(); i++) a.set(i, m.get(a.get(i)));  // si trabajamos con fenwick/segtree, +1 a m.get 
 
     // Pair
     ArrayList<Pair<Integer, Integer>> p = new ArrayList<>();  // a será sobreescrito

@@ -1,0 +1,12 @@
+Un registro de los temas vistos en las clases del club de programación...
+
+01. Ramsés - Intro
+02. Diego - Strings básico
+03. Ramsés - Fuerza Bruta con Bitmask
+04. Diego - Two pointer/Sliding Window
+05. Leo - PFC/Binomio Coeficiente/Perms
+06. Ramsés, Diego, Leo - All-star 1 (bitmask, two pointer, sliding window, PFC, combs, perms)
+07. Ramsés - Prefix Sum
+08. Leo - Modular arithmetic/binary exponentiation
+09. Leo - Búsqueda binaria sobre funciones
+10. Chuy - Grafos básico/DFS
