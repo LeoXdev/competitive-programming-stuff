@@ -10,7 +10,7 @@ También decidí hacer este repositorio porque se me hiba un poco el tiempo busc
 
 ### 🔧 `templates/`
 
-Plantillas de código, si algo no está posiblemente es porque ya me lo sé de memoria (como búsqueda binaria), destaco que algunas plantillas tienen comentarios relevantes acerca de que cosas se pueden modificar o alguna pequeña aclaración.
+Plantillas de código, ~~si algo no está posiblemente es porque ya me lo sé de memoria (como búsqueda binaria)~~, destaco que algunas plantillas tienen comentarios relevantes acerca de que cosas se pueden modificar o alguna pequeña aclaración.
 
 ---
 
